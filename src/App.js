@@ -9,11 +9,12 @@ import Homepage from './components/Homepage'
 import Nav from './components/navbar/Nav'
 
 function App() {
+
   return (
     <Router>
       <Nav/>
       <Route exact path="/">
-        <Homepage header="Sindre Haavaldsen"/>
+        <Homepage/>
       </Route>
     </Router>
   );

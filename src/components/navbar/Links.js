@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Links(props) {
     const currentLocation = props.location.pathname;
-    console.log(currentLocation);
+    console.log(props.type);
     const link = props.link;
 
-    if (link.type === "route") {
+    if (props.type === "route") {
         return (
             <li id={link.path === currentLocation ? "current-page-link" : null}>
                 <Link to={link.path}>
@@ -20,9 +20,8 @@ function Links(props) {
         )
     } else {
         return (
-            <li id={link.path === currentLocation ? "current-page-link" : null}>
+            <li>
                 <a target="blank" href={link.path}>
-                    <p>{link.title}</p>
                     <FontAwesomeIcon icon={link.icon}/>
                 </a>
             </li>

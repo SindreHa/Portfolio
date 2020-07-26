@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import '../../css/nav.css'
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 import Links from './Links'
 
 import { faHome, faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import portrait from '../../resources/portrait.jpg'
 
 class Nav extends Component {
 
@@ -49,8 +48,8 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                <div id="nav-image">
-                    <img src={portrait} alt="Portrait"/>
+                <div id="nav-header">
+                    <Link to="/">SH</Link>
                 </div>
                 <ul className="nav-links text-reveal">
                     {
