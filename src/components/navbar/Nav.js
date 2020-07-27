@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import PropTypes from 'prop-types'
 import '../../css/nav.css'
-import {withRouter, Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 import Links from './Links'
+import MenuToggle from './MenuToggle'
 
-import { faHome, faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faEnvelope, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Nav extends Component {
@@ -21,7 +22,7 @@ class Nav extends Component {
                 },
                 {
                     title: "Prosjekter",
-                    icon: faPen,
+                    icon: faEye,
                     path: "/projects"
                 },
                 {
@@ -41,36 +42,32 @@ class Nav extends Component {
                     icon: faGithub,
                     path: "https://github.com/SindreHa"
                 }
-            ]
+            ],
+            menuOpen: false
         }
+    }
+
+    setOpen = (boolean) => {
+        this.setState({menuOpen: boolean})
     }
 
     render() {
         return (
-            <nav>
-                <div id="nav-header">
-                    <Link to="/">SH</Link>
-                </div>
-                <ul className="nav-links text-reveal">
-                    {
-                    this.state.navLinks.map((link, key) => (
-                        <Links 
-                            type="route" 
-                            key={key} 
-                            link={link}/>
-                    ))
-                    }
-                </ul>
-                <ul className="nav-links nav-social">
-                    {
-                    this.state.socialLinks.map((link, key) => (
-                        <Links
-                            type="social" 
-                            key={key} 
-                            link={link}/>
-                    ))
-                    }
-                </ul>
+            <nav className={this.state.menuOpen ? "open" : null}>
+                <MenuToggle 
+                    setOpen={this.setOpen} 
+                    menuOpen={this.state.menuOpen}/>
+                <Links 
+                    class={this.state.menuOpen ? "nav-links open" : "nav-links"}
+                    type="route" 
+                    links={this.state.navLinks}
+                    setOpen={this.setOpen}
+                    menuOpen={this.state.menuOpen}/>
+                <Links 
+                    class="nav-social"
+                    type="social" 
+                    links={this.state.socialLinks}
+                    setOpen={this.setOpen}/>
             </nav>
         )
     }
