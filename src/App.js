@@ -7,8 +7,20 @@ import {
 
 import Homepage from './components/Homepage'
 import Nav from './components/navbar/Nav'
+import About from './components/About';
 
 function App() {
+
+  /** 
+    * Metode som henter høyde av viewport minus nettleser sin toolbar 
+  */
+  const getViewHeight = () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  getViewHeight()
+
   const [visited, setVisited] = useState(false)
 
   return (
@@ -16,6 +28,9 @@ function App() {
       <Nav/>
       <Route exact path="/">
         <Homepage visited={visited} setVisited={setVisited}/>
+      </Route>
+      <Route path="/about">
+        <About/>
       </Route>
     </Router>
   );
