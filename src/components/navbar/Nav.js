@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 import Links from './Links'
 import MenuToggle from './MenuToggle'
 
-import { faHome, faEnvelope, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faEnvelope, faEye, faMale } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Nav extends Component {
@@ -19,6 +19,11 @@ class Nav extends Component {
                     title: "Hjem",
                     icon: faHome,
                     path: "/"
+                },
+                {
+                    title: "Om meg",
+                    icon: faMale,
+                    path: "/about"
                 },
                 {
                     title: "Prosjekter",

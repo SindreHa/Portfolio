@@ -66,6 +66,9 @@ nav ul li, nav ul {
     color: var(--text-secondary);
     transition: color .2s ease-out;
 }
+.nav-links {
+    grid-area: links;
+}
 .nav-links li a {
     display: flex;
     align-items: center;
@@ -228,20 +231,22 @@ nav ul li, nav ul {
         transform: rotate(-90deg);
     }
   }
-@media(max-width: 600px) {
+@media(max-width: 610px) {
     nav {
         grid-template-areas: 
-            "social hamburger";
+            "social hamburger"
+            "links links";
         grid-template-columns: 1fr 72px;
         grid-template-rows: var(--nav-width);
         position: relative;
+        transition-duration: .35s;
+    }
+    nav.open {
+        height: calc(5 * var(--nav-width));
     }
     .nav-links {
-        position: absolute;
-        right: -72px;
-        top: 72px;
         height: initial;
-        width: initial;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         transition: right .3s ease-out;
@@ -250,23 +255,16 @@ nav ul li, nav ul {
         right: 0px;
     }
     .nav-links li{
-        height: 100%;
-        width: var(--nav-width);
+        height: var(--nav-width);
+        width: 100%;
         line-height: var(--nav-width);
+        transform: none;
     }
     .nav-links li p {
-        display: none;
+        min-width: initial;
     }
-    .text-reveal li:hover svg {
-        opacity: 1;
-        color: var(--main-accent);
-    }
-    #current-page-link:after {
-        top: initial;
-        left: 71px;
-        width: initial;
-        height: 100%;
-        width: 1px;
+    .nav-links li svg {
+        transform: rotate(0deg);
     }
     .nav-social {
         justify-content: left;
