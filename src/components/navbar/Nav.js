@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import PropTypes from 'prop-types'
 import '../../css/nav.css'
 import {withRouter} from 'react-router-dom';
+import onClickOutside from "react-onclickoutside";
 
 import Links from './Links'
 import MenuToggle from './MenuToggle'
@@ -10,6 +11,10 @@ import { faHome, faEnvelope, faEye, faMale } from '@fortawesome/free-solid-svg-i
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Nav extends Component {
+
+    handleClickOutside = evt => {
+        this.setState({menuOpen: false})
+    };
 
     constructor(props) {
         super(props);
@@ -82,5 +87,5 @@ Nav.propTypes = {
     location: PropTypes.object.isRequired
 }
 
-export default withRouter(Nav)
+export default withRouter(onClickOutside(Nav))
 
