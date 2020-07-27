@@ -7,6 +7,7 @@
         ". .";
         grid-template-rows: 20% 1fr 20%;
         grid-template-columns: 50% 50%;
+    overflow: hidden;
 }
 #homepage header {
     display: flex;
@@ -33,7 +34,7 @@
     place-items: center;
 }
 #homepage #portrait img {
-    width: 400px;
+    width: 300px;
     border-radius: 50%;
     margin-right: 15%;
 }
