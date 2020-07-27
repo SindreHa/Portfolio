@@ -6,19 +6,20 @@
   --text-primary: #f8f8f8;
   --text-secondary: #bbbbbb;
 
-  --nav-width: 70px;
+  --nav-width: 72px;
 }
 
 body,html {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
-  background: rgb(29,29,29);
   background: rgb(29,29,29);
   background: linear-gradient(145deg, #1d1d1d 0%, #1d1d1d 60%, #131c33 75%, #122e69 100%);
   color: var(--text-primary);
@@ -38,4 +39,39 @@ body {
 a, a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+/* Component transitions */
+.slideIn-appear {
+  opacity: 0;
+  transform: translatey(500px)
+}
+.slideIn-enter {
+	opacity: 0;
+}
+.slideIn-enter-done {
+  opacity: 1;
+  transform: translatey(0px);
+	transition: opacity .6s, transform .8s cubic-bezier(.30,.99,.50,1);
+}
+.slideIn-exit {
+	opacity: 1;
+}
+.slideIn-exit-active {
+	opacity: 0;
+	transition: opacity 500ms;
+}
+@keyframes slideInAnim {
+  from {transform: translatey(500px)}
+  to {transform: translatey(0px)}
+}
+
+@media(max-width: 1024px) {
+  #root {
+    grid-template-areas: 
+      "nav"
+      "page";
+      grid-template-rows: var(--nav-width) 1fr;
+    grid-template-columns: 1fr;
+  }
 }

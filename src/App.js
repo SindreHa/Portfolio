@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,12 +9,13 @@ import Homepage from './components/Homepage'
 import Nav from './components/navbar/Nav'
 
 function App() {
+  const [visited, setVisited] = useState(false)
 
   return (
     <Router>
       <Nav/>
       <Route exact path="/">
-        <Homepage/>
+        <Homepage visited={visited} setVisited={setVisited}/>
       </Route>
     </Router>
   );

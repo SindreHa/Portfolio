@@ -1,29 +1,47 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import '../css/homepage.css'
+import { CSSTransition }  from 'react-transition-group';
 
 import portrait from '../resources/portrait.jpg'
 
+const SlideIn = ({in: inProp, children, delay}) => (
+    
+    <CSSTransition
+        unmountOnExit
+        in={inProp}
+        timeout={delay}
+        classNames='slideIn'
+        appear >
+            {children}
+    </CSSTransition>
+);
+
 export default class Homepage extends Component {
-    static propTypes = {
-        
+    constructor() {
+        super();
+        this.state = {
+            transition: true
+        }
     }
 
     render() {
         return (
             <div id="homepage">
                 <header>
-                    <h1>
-                        Hei,
-                    </h1>
-                    <h1>
-                        mitt navn er Sindre.
-                    </h1>
-                    <p>Webutvikler / Frontend / React</p>
+                    <SlideIn in={this.state.transition} delay={0}>
+                        <h1>
+                            Sindre Haavaldsen
+                        </h1>
+                    </SlideIn>
+                    <SlideIn in={this.state.transition} delay={200}>
+                        <p>Webutvikler / Frontend</p>
+                    </SlideIn>
                 </header>
-                <div id="portrait">
-                    <img src={portrait} alt="Portrait"/>
-                </div>
+                <SlideIn in={this.state.transition} delay={1000}>
+                    <div id="portrait">
+                        <img src={portrait} alt="Portrait"/>
+                    </div>
+                </SlideIn>
                 
             </div>
         )
