@@ -36,11 +36,11 @@ class Nav extends Component {
                     icon: faEye,
                     path: "/projects"
                 },
-                {
+                /* {
                     title: "Kontakt meg",
                     icon: faEnvelope,
                     path: "/contact"
-                }
+                } */
             ],
             socialLinks: [
                 {
