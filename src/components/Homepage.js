@@ -49,7 +49,7 @@ export default class Homepage extends Component {
                         <p>Webutvikler / Frontend</p>
                     </SlideIn>
                 </header>
-                <FadeIn in={this.state.transition} delay={1000}>
+                <FadeIn in={this.state.transition} delay={850}>
                     <div id="portrait">
                         <img src={portrait} alt="Portrait"/>
                     </div>

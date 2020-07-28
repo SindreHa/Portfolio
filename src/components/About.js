@@ -48,7 +48,7 @@ export default class About extends Component {
                     </SlideIn>
                     <FadeIn 
                         in={this.state.transition} 
-                        delay={800}>
+                        delay={650}>
                         <div>
                             <p>{this.state.p1}</p>
                             <p>{this.state.p2}</p>

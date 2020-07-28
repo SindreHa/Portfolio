@@ -170,7 +170,7 @@ export default class Projects extends Component {
     }
 
     render() {
-        let delay = 600;
+        let delay = 350;
         return (
             <div id="projects-wrapper">
                 <SlideIn in={this.state.transition} delay={0}>
@@ -179,7 +179,7 @@ export default class Projects extends Component {
                 <div id="projects">
                     {
                     this.state.projects.map((project, i) => { 
-                        delay += 200;
+                        delay += 250;
                         return (
                         <FadeIn 
                             in={this.state.transition} delay={delay}
