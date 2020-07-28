@@ -8,6 +8,7 @@ import {
 import Homepage from './components/Homepage'
 import Nav from './components/navbar/Nav'
 import About from './components/About';
+import Projects from './components/projects/Projects';
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
       </Route>
       <Route path="/about">
         <About/>
+      </Route>
+      <Route path="/projects">
+        <Projects />
       </Route>
     </Router>
   );
