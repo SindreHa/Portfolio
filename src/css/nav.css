@@ -257,7 +257,7 @@ nav ul li, nav ul {
         transition-duration: .35s;
     }
     nav.open {
-        height: calc(5 * var(--nav-width));
+        height: calc(4 * var(--nav-width));
     }
     #menu:after {
         transition: position .2s;
