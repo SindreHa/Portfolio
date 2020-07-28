@@ -16,6 +16,18 @@ const SlideIn = ({in: inProp, children, delay}) => (
     </CSSTransition>
 );
 
+const FadeIn = ({in: inProp, children, delay}) => (
+    
+    <CSSTransition
+        unmountOnExit
+        in={inProp}
+        timeout={delay}
+        classNames='fadeIn'
+        appear >
+            {children}
+    </CSSTransition>
+);
+
 export default class Homepage extends Component {
     constructor() {
         super();
@@ -37,11 +49,11 @@ export default class Homepage extends Component {
                         <p>Webutvikler / Frontend</p>
                     </SlideIn>
                 </header>
-                <SlideIn in={this.state.transition} delay={1000}>
+                <FadeIn in={this.state.transition} delay={1000}>
                     <div id="portrait">
                         <img src={portrait} alt="Portrait"/>
                     </div>
-                </SlideIn>
+                </FadeIn>
                 
             </div>
         )
