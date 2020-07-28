@@ -259,6 +259,22 @@ nav ul li, nav ul {
     nav.open {
         height: calc(5 * var(--nav-width));
     }
+    #menu:after {
+        transition: position .2s;
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0px;
+        right: 10px;
+        left: 10px;
+        bottom: initial;
+        height: 4px;
+        border-radius: 0 0 4px 4px;
+        background-color: var(--main-accent);
+        transition-property: width, top, bottom;
+        transition-duration: .15s;
+        transition-timing-function: ease-out;
+    }
     .nav-links {
         height: initial;
         width: 100%;
