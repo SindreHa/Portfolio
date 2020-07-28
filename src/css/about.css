@@ -9,21 +9,21 @@
     grid-template-rows: 20% 1fr 1fr 20%;
     overflow: hidden;
 }
-#container {
+#about #about-container {
     grid-area: container;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 100px;
 }
-#about #container h1 {
+#about #about-container h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 50pt;
     font-weight: 400;
     grid-area: title;
     margin: 0 0 20px;
 }
-#about #container p {
+#about #about-container p {
     grid-area: paragraph;
     margin: 0 0 10px;
 }
@@ -39,10 +39,10 @@
         grid-template-rows: 10% 1fr 1fr 30%;
         overflow: hidden;
     }
-    #container {
+    #about #about-container {
         margin: 0 40px;
     }
-    #about #container h1 {
+    #about #about-container h1 {
         font-size: 35pt;
     }
 }
