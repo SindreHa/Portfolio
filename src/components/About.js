@@ -15,6 +15,18 @@ const SlideIn = ({in: inProp, children, delay}) => (
     </CSSTransition>
 );
 
+const FadeIn = ({in: inProp, children, delay}) => (
+    
+    <CSSTransition
+        unmountOnExit
+        in={inProp}
+        timeout={delay}
+        classNames='fadeIn'
+        appear >
+            {children}
+    </CSSTransition>
+);
+
 export default class About extends Component {
 
     constructor() {
@@ -30,18 +42,18 @@ export default class About extends Component {
     render() {
         return (
             <div id="about">
-                <div id="container">
+                <div id="about-container">
                     <SlideIn in={this.state.transition}>
                         <h1>{this.state.title}</h1>
                     </SlideIn>
-                    <SlideIn 
+                    <FadeIn 
                         in={this.state.transition} 
-                        delay={500}>
+                        delay={800}>
                         <div>
                             <p>{this.state.p1}</p>
                             <p>{this.state.p2}</p>
                         </div>
-                    </SlideIn>
+                    </FadeIn>
                 </div>
             </div>
         )
