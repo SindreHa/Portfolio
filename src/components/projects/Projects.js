@@ -3,7 +3,7 @@ import Project from './Project';
 import '../../css/projects.css'
 
 import { CSSTransition }  from 'react-transition-group';
-import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 const FadeIn = ({in: inProp, children, delay}) => (
@@ -95,6 +95,33 @@ export default class Projects extends Component {
                     ]
                 },
                 {
+                    title: "Social Campus",
+                    link: [
+                        {
+                            url: "https://github.com/SindreHa/SocialCampus",
+                            icon: faGithub
+                        }
+                    ],
+                    stack: [
+                        {
+                            icon: faHtml5, 
+                            color: "#E44D26"
+                        },
+                        {
+                            icon: faCss3Alt,
+                            color: "#0068bb"
+                        },
+                        {
+                            icon: faJsSquare,
+                            color: "#f5bb2b"
+                        },
+                        {
+                            icon: faPhp, 
+                            color: "#8892be"
+                        }
+                    ]
+                },
+                {
                     title: "Mattilsynet Tilsynsrapporter",
                     link: [
                         {
@@ -125,29 +152,6 @@ export default class Projects extends Component {
                         {
                             icon: faJava, 
                             color: "#f89820"
-                        }
-                    ]
-                },
-                {
-                    title: "Social Campus",
-                    link: [
-                        {
-                            url: "https://github.com/SindreHa/SocialCampus",
-                            icon: faGithub
-                        }
-                    ],
-                    stack: [
-                        {
-                            icon: faHtml5, 
-                            color: "#E44D26"
-                        },
-                        {
-                            icon: faCss3Alt,
-                            color: "#0068bb"
-                        },
-                        {
-                            icon: faPhp, 
-                            color: "#8892be"
                         }
                     ]
                 }
