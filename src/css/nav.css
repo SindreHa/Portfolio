@@ -1,7 +1,6 @@
 nav {
     grid-area: nav;
     background: var(--secondary-bg);
-
     display: grid;
     grid-template-areas: 
         "hamburger"
@@ -102,19 +101,35 @@ nav ul li, nav ul {
 .nav-links li:hover svg {
     color: var(--main-accent);
 }
-#current-page-link {
-    color: var(--main-accent);
+.nav-links li {
     position: relative;
 }
-#current-page-link:after {
+.nav-links li:after {
     transition: position .2s;
     position: absolute;
     display: block;
     content: "";
-    top: 0px;
-    bottom: 0px;
-    width: 1px;
+    top: 36px;
+    bottom: 36px;
+    width: 0px;
+    border-radius: 0 4px 4px 0;
     background-color: var(--main-accent);
+    transition-property: width, top, bottom;
+    transition-duration: .15s;
+    transition-timing-function: ease-out;
+}
+.nav-links li:hover:after {
+    top: 22px;
+    bottom: 22px;
+    width: 4px;
+}
+#current-page-link:after {
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+}
+#current-page-link i {
+    color: var(--main-accent);
 }
 .nav-social {
     grid-area: social;

@@ -7,7 +7,8 @@ import onClickOutside from "react-onclickoutside";
 import Links from './Links'
 import MenuToggle from './MenuToggle'
 
-import { faHome, faEnvelope, faEye, faMale } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faMale } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Nav extends Component {
