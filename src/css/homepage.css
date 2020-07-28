@@ -41,7 +41,7 @@
 
 @media(max-width: 1024px) {
     #homepage {
-        grid-template-rows: 20% 1fr 1fr;
+        grid-template-rows: 20% min-content min-content;
         grid-template-columns: 1fr 40%;
     }
     #homepage header {
@@ -59,7 +59,7 @@
         ". ."
         "welcome-header welcome-header"
         "img img";
-        grid-template-rows: 15% 1fr 1fr;
+        grid-template-rows: 25% min-content min-content;
         grid-template-columns: 1fr 1fr;
     } 
     #homepage header {
