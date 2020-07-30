@@ -11,7 +11,9 @@
 
   --nav-width: 72px;
 }
-
+html {
+  background: var(--main-bg);
+}
 body,html {
   margin: 0;
   padding: 0;
@@ -90,6 +92,24 @@ a, a:visited, a:active {
 }
 .btn:active {
 	transform: scale(.97);
+}
+
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--card-bg);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-accent);
 }
 
 /* Component transitions */
