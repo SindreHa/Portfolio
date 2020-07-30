@@ -118,7 +118,7 @@ export default class Projects extends Component {
                     title: "Social Campus",
                     image: SocialCampus,
                     description: "Webapp / JS / PHP / MySQL",
-                    themeColor: "#5a96bb",
+                    themeColor: "#049ee5",
                     link: [
                         {
                             url: "https://github.com/SindreHa/SocialCampus",
@@ -149,7 +149,7 @@ export default class Projects extends Component {
                     title: "Social Campus",
                     image: SocialCampusApp,
                     description: "Android App / Java / MySQL",
-                    themeColor: "#5a96bb",
+                    themeColor: "#049ee5",
                     link: [
                         {
                             url: "https://github.com/SindreHa/SocialCampus-Android",
