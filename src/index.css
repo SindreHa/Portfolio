@@ -2,8 +2,10 @@
 :root {
   --main-bg: #1d1d1d;
   --secondary-bg: #181818;
+  --card-bg: #242424;
   --main-accent: #d62828;
   --secondary-accent: #8b1a1a;
+  --border-accent: #0097a7;
   --text-primary: #f8f8f8;
   --text-secondary: #bbbbbb;
 
@@ -61,17 +63,19 @@ a, a:visited, a:active {
 	height: 100%;
 	text-decoration: none;
 	border-radius: 2px;
-	transition: color .2s, 
-		background-color .2s, transform .1s;
-	transition-timing-function: ease-out;
-	font-size: 14pt;
+	transition-property: color, 
+		background-color, filter;
+  transition-timing-function: ease-out;
+  transition-duration: .15s;
+	font-size: 12pt;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	user-select: none;
 }
 .btn:hover {
-	background-color: var(--main-accent);
+  /* background-color: var(--secondary-bg); */
+  filter: brightness(1.2);
 	/* color: var(--accentBlue); */
 	cursor: pointer;
 	/* box-shadow: inset 0px 0px 0px 3px var(--main-accent); */

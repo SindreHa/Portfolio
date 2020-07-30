@@ -13,8 +13,8 @@ function Project(props) {
                 <img src={project.image} alt="Photo"/>
             </div>
             <h1>{project.title}</h1>
-            {/* <p>{project.description}</p> */}
-            <div className="project-stack">
+            <p>{project.description}</p>
+            <div className="project-stack" style={{borderColor: project.themeColor}}>
                 {
                     project.stack.map((icon, i) => (
                         <FontAwesomeIcon 
@@ -31,8 +31,9 @@ function Project(props) {
                             className="btn" 
                             href={link.url}
                             target="blank"
-                            key={i}>
-                        <FontAwesomeIcon mask={'far'} icon={link.icon}/></a>
+                            key={i}
+                            style={{borderColor: project.themeColor}}>
+                        <FontAwesomeIcon mask={'far'} icon={null}/>{link.title}</a>
                     ))
                 }
             </div>
