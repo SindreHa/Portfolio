@@ -6,6 +6,14 @@ import { CSSTransition }  from 'react-transition-group';
 import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 
+import {
+    Buzzdgame,
+    ShBilpleie,
+    SocialCampus,
+    Mattilsynet,
+    Tegneprogram
+  } from '../../resources'
+
 const FadeIn = ({in: inProp, children, delay}) => (
     
     <CSSTransition
@@ -38,6 +46,7 @@ export default class Projects extends Component {
             projects: [
                 {
                     title: "Buzzdgame",
+                    image: Buzzdgame,
                     link: [
                         {
                             url: "https://github.com/SindreHa/Buzzdgame",
@@ -69,6 +78,7 @@ export default class Projects extends Component {
                 },
                 {
                     title: "SHBilpleie",
+                    image: ShBilpleie,
                     link: [
                         {
                             url: "https://github.com/SindreHa/SHBilpleie",
@@ -96,6 +106,7 @@ export default class Projects extends Component {
                 },
                 {
                     title: "Social Campus",
+                    image: SocialCampus,
                     link: [
                         {
                             url: "https://github.com/SindreHa/SocialCampus",
@@ -122,7 +133,8 @@ export default class Projects extends Component {
                     ]
                 },
                 {
-                    title: "Mattilsynet Tilsynsrapporter",
+                    title: "Mattilsynet Tilsynsrapport",
+                    image: Mattilsynet,
                     link: [
                         {
                             url: "https://github.com/SindreHa/Mattilsynet-Tilsynsrapport-app",
@@ -142,6 +154,7 @@ export default class Projects extends Component {
                 },
                 {
                     title: "Paint Applikasjon",
+                    image: Tegneprogram,
                     link: [
                         {
                             url: "https://github.com/SindreHa/Paint-in-Java",
