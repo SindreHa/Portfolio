@@ -10,7 +10,7 @@ function Project(props) {
     return (
         <div className="project-container">
             <div className="image-container">
-                <img src={"https://source.unsplash.com/random/150*30" + props.i} alt="Photo"/>
+                <img src={project.image} alt="Photo"/>
             </div>
             <h1>{project.title}</h1>
             {/* <p>{project.description}</p> */}
