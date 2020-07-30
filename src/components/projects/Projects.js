@@ -47,14 +47,18 @@ export default class Projects extends Component {
                 {
                     title: "Buzzdgame",
                     image: Buzzdgame,
+                    description: "Webapp / React / AWS",
+                    themeColor: "#0097a7",
                     link: [
                         {
                             url: "https://github.com/SindreHa/Buzzdgame",
-                            icon: faGithub
+                            icon: faGithub,
+                            title: "GitHub"
                         },
                         {
                             url: "https://buzzdgame.com/",
-                            icon: faEye
+                            icon: faEye,
+                            title: "Nettside"
                         }
                     ],
                     stack: [
@@ -79,14 +83,18 @@ export default class Projects extends Component {
                 {
                     title: "SHBilpleie",
                     image: ShBilpleie,
+                    description: "Webapp / React",
+                    themeColor: "#ab3b0f",
                     link: [
                         {
                             url: "https://github.com/SindreHa/SHBilpleie",
-                            icon: faGithub
+                            icon: faGithub,
+                            title: "GitHub"
                         },
                         {
                             url: "https://shbilpleie.no",
-                            icon: faEye
+                            icon: faEye,
+                            title: "Nettside"
                         }
                     ],
                     stack: [
@@ -107,10 +115,13 @@ export default class Projects extends Component {
                 {
                     title: "Social Campus",
                     image: SocialCampus,
+                    description: "Webapp / JS / PHP",
+                    themeColor: "#5a96bb",
                     link: [
                         {
                             url: "https://github.com/SindreHa/SocialCampus",
-                            icon: faGithub
+                            icon: faGithub,
+                            title: "GitHub"
                         }
                     ],
                     stack: [
@@ -133,12 +144,15 @@ export default class Projects extends Component {
                     ]
                 },
                 {
-                    title: "Mattilsynet Tilsynsrapport",
+                    title: "Mattilsynet",
                     image: Mattilsynet,
+                    description: "Android App / Java",
+                    themeColor: "#d32e2d",
                     link: [
                         {
                             url: "https://github.com/SindreHa/Mattilsynet-Tilsynsrapport-app",
-                            icon: faGithub
+                            icon: faGithub,
+                            title: "GitHub"
                         }
                     ],
                     stack: [
@@ -155,10 +169,13 @@ export default class Projects extends Component {
                 {
                     title: "Paint Applikasjon",
                     image: Tegneprogram,
+                    description: "Java program / JavaFX",
+                    themeColor: "#ececec",
                     link: [
                         {
                             url: "https://github.com/SindreHa/Paint-in-Java",
-                            icon: faGithub
+                            icon: faGithub,
+                            title: "GitHub"
                         }
                     ],
                     stack: [

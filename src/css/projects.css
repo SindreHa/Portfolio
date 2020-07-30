@@ -33,11 +33,11 @@
         "img"
         "stack"
         "title"
+        "description"
         "buttons";
-    grid-template-rows: 200px 70px 1fr 80px;
-    background-color: var(--secondary-bg);
+    grid-template-rows: 200px min-content min-content 1fr 80px;
+    background-color: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0px 0px 0px 0px var(--text-secondary);
 }
 .project-container .image-container {
     margin: 20px 20px 0;
@@ -54,38 +54,50 @@
     grid-area: stack;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: row;
-    margin: 0 20px;
+    margin: 12px 20px 10px;
+    padding-top: 2px;
     font-size: 20pt;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    position: relative;
+}
+.project-container .project-stack:before {
+    content: "Stack";
+    border-radius: 4px;
+    font-size: 9pt;
+    color: var(--text-secondary);
+    position: absolute;
+    left: 7px;
+    top: -9px;
+    background-color: var(--card-bg);
+    padding: 0 7px;
 }
 .project-container .project-stack svg{
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 .project-container h1 {
-    margin: auto 20px;
+    margin: 0 20px 0 25px;
     font-size: 20pt;
-    text-align: center;
+    text-align: left;
 }
 .project-container p {
-    margin: 0 20px;
+    margin: 0 20px 0 25px;
 }
 .project-container .button-container {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 50px;
-    grid-template-rows: 50px;
+    grid-auto-columns: 50%;
+    margin: 0 30px;
+    grid-template-rows: 40px;
     place-content: center;
     gap: 20px;
 }
 .project-container a {
-    background-color: var(--secondary-bg);
-    border: 1px solid var(--secondary-accent);
-    border-radius: 50%;
-    font-size: 17pt;
-}
-.project-container a:hover {
-    border-radius: 50%;
+    background-color: var(--main-bg);
+    border: 1px solid;
 }
 
 @media(max-width: 1024px) {
@@ -122,10 +134,8 @@
             "stack"
             "title"
             "buttons";
-        grid-template-rows: 200px 70px 1fr 80px;
-        background-color: var(--secondary-bg);
+        grid-template-rows: 200px min-content min-content 1fr 80px;
         border-radius: 8px;
-        box-shadow: 0px 0px 0px 0px var(--text-secondary);
     }
     #projects-title {
         font-size: 40pt;
