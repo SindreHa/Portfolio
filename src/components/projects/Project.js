@@ -33,7 +33,8 @@ function Project(props) {
                             target="blank"
                             key={i}
                             style={{borderColor: project.themeColor}}>
-                        <FontAwesomeIcon mask={'far'} icon={null}/>{link.title}</a>
+                                {link.title}
+                        </a>
                     ))
                 }
             </div>
