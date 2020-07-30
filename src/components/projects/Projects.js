@@ -5,11 +5,13 @@ import '../../css/projects.css'
 import { CSSTransition }  from 'react-transition-group';
 import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 import {
     Buzzdgame,
     ShBilpleie,
     SocialCampus,
+    SocialCampusApp,
     Mattilsynet,
     Tegneprogram
   } from '../../resources'
@@ -115,7 +117,7 @@ export default class Projects extends Component {
                 {
                     title: "Social Campus",
                     image: SocialCampus,
-                    description: "Webapp / JS / PHP",
+                    description: "Webapp / JS / PHP / MySQL",
                     themeColor: "#5a96bb",
                     link: [
                         {
@@ -140,6 +142,33 @@ export default class Projects extends Component {
                         {
                             icon: faPhp, 
                             color: "#8892be"
+                        }
+                    ]
+                },
+                {
+                    title: "Social Campus",
+                    image: SocialCampusApp,
+                    description: "Android App / Java / MySQL",
+                    themeColor: "#5a96bb",
+                    link: [
+                        {
+                            url: "https://github.com/SindreHa/SocialCampus-Android",
+                            icon: faGithub,
+                            title: "GitHub"
+                        }
+                    ],
+                    stack: [
+                        {
+                            icon: faAndroid, 
+                            color: "#3DDC84"
+                        },
+                        {
+                            icon: faJava, 
+                            color: "#f89820"
+                        },
+                        {
+                            icon: faDatabase,
+                            color: "#055b83"
                         }
                     ]
                 },
