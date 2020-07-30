@@ -43,7 +43,7 @@ export default class About extends Component {
         return (
             <div id="about">
                 <div id="about-container">
-                    <SlideIn in={this.state.transition}>
+                    <SlideIn in={this.state.transition} delay={0}>
                         <h1>{this.state.title}</h1>
                     </SlideIn>
                     <FadeIn 

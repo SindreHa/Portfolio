@@ -3,7 +3,7 @@ import Project from './Project';
 import '../../css/projects.css'
 
 import { CSSTransition }  from 'react-transition-group';
-import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faAws, faAndroid, faJava, faGithub, faHtml5, faPhp, faCss3Alt, faNodeJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 import {
