@@ -65,12 +65,12 @@
     position: relative;
 }
 .project-container .project-stack:before {
-    content: "";
+    content: "Stack";
     border-radius: 4px;
     font-size: 9pt;
     color: var(--text-secondary);
     position: absolute;
-    left: 7px;
+    left: 10px;
     top: -9px;
     background-color: var(--card-bg);
     padding: 0 7px;
