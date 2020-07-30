@@ -8,7 +8,7 @@ import {
 import Homepage from './components/Homepage'
 import Nav from './components/navbar/Nav'
 import About from './components/About';
-import Projects from './components/projects/Projects';
+import Portfolio from './components/projects/Portfolio';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
         <About/>
       </Route>
       <Route path="/projects">
-        <Projects />
+        <Portfolio />
       </Route>
     </Router>
   );

@@ -32,7 +32,7 @@ class Nav extends Component {
                     path: "/about"
                 },
                 {
-                    title: "Prosjekter",
+                    title: "Portefølje",
                     icon: faEye,
                     path: "/projects"
                 },
