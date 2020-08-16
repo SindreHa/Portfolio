@@ -13,7 +13,8 @@ import {
     SocialCampus,
     SocialCampusApp,
     Mattilsynet,
-    Tegneprogram
+    Tegneprogram,
+    QuizApp
   } from '../../resources'
 
 const FadeIn = ({in: inProp, children, delay}) => (
@@ -192,6 +193,37 @@ export default class Portfolio extends Component {
                         {
                             icon: faJava, 
                             color: "#f89820"
+                        }
+                    ]
+                },
+                {
+                    title: "Quiz App",
+                    image: QuizApp,
+                    description: "Java / Spring Boot / React",
+                    themeColor: "#296177",
+                    link: [
+                        {
+                            url: "https://github.com/SindreHa/Quizapp",
+                            icon: faGithub,
+                            title: "GitHub"
+                        }
+                    ],
+                    stack: [
+                        {
+                            icon: faJava, 
+                            color: "#f89820"
+                        },
+                        {
+                            icon: faReact, 
+                            color: "#61dbfb"
+                        },
+                        {
+                            icon: faCss3Alt,
+                            color: "#0068bb"
+                        },
+                        {
+                            icon: faDatabase,
+                            color: "#055b83"
                         }
                     ]
                 },
