@@ -13,7 +13,7 @@
 }
 #projects {
     display: grid;
-    grid-template-columns: 80px repeat(6, 300px) 20px;
+    grid-template-columns: 80px repeat(7, 300px) 20px;
     grid-template-rows: min-content;
     grid-auto-flow: column;
     gap: 20px;
@@ -107,7 +107,7 @@
     #projects {
         width: 100%;
         display: grid;
-        grid-template-columns: 0px repeat(6, 300px) 20px;
+        grid-template-columns: 0px repeat(7, 300px) 20px;
         grid-template-rows: repeat(auto-fill, min-content);
         gap: 20px;
         padding: 0 40px 20px;
