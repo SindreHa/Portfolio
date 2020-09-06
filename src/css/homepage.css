@@ -1,105 +1,105 @@
 #homepage {
-    grid-area: page;
-    display: grid;
-    grid-template-areas: 
-        ". ."
-        "welcome-header img"
-        ". .";
-        grid-template-rows: 20% 1fr 20%;
-        grid-template-columns: 50% 50%;
-    overflow: hidden;
+  grid-area: page;
+  display: grid;
+  grid-template-areas:
+    ". ."
+    "welcome-header img"
+    ". .";
+  grid-template-rows: 20% 1fr 20%;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
 }
 #homepage header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    grid-area: welcome-header;
-    padding-left: 100px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: welcome-header;
+  padding-left: 100px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
 #homepage header h1 {
-    margin: 0 20px 0 0;
-    font-size: 50pt;
-    line-height: 80px;
+  margin: 0 20px 0 0;
+  font-size: 50pt;
+  line-height: 80px;
 }
 #homepage header p {
-    margin: 20px 0 0 5px;
-    font-size: 18pt;
-    color: var(--text-secondary);
+  margin: 20px 0 0 5px;
+  font-size: 18pt;
+  color: var(--text-secondary);
 }
 #homepage #portrait {
-    grid-area: img;
-    display: grid;
-    place-items: center;
+  grid-area: img;
+  display: grid;
+  place-items: center;
 }
 #homepage #portrait img {
-    width: 300px;
-    border-radius: 50%;
-    margin-right: 15%;
+  width: 300px;
+  border-radius: 50%;
+  margin-right: 15%;
 }
 
-@media(max-width: 1024px) {
-    #homepage {
-        grid-template-rows: 20% min-content min-content;
-        grid-template-columns: 1fr 40%;
-    }
-    #homepage header {
-        padding-left: 60px;
-    }
-    #homepage #portrait img {
-        width: 230px;
-        border-radius: 50%;
-        margin: 50px 100px 50px 0;
-    }
+@media (max-width: 1024px) {
+  #homepage {
+    grid-template-rows: 20% min-content min-content;
+    grid-template-columns: 1fr 40%;
+  }
+  #homepage header {
+    padding-left: 60px;
+  }
+  #homepage #portrait img {
+    width: 230px;
+    border-radius: 50%;
+    margin: 50px 100px 50px 0;
+  }
 }
-@media(max-width: 768px) {
-    #homepage {
-        grid-template-areas: 
-        ". ."
-        "welcome-header welcome-header"
-        "img img";
-        grid-template-rows: 25% min-content min-content;
-        grid-template-columns: 1fr 1fr;
-    } 
-    #homepage header {
-        padding-left: 40px;
-    }
-    #homepage header h1 {
-        font-size: 50pt;
-        line-height: 60px;
-    }
-    #homepage header p {
-        margin: 15px 40px 15px 0;
-        font-size: 16pt;
-    }
-    #homepage #portrait img {
-        width: 240px;
-        margin: 50px 40px 50px auto;
-    }
+@media (max-width: 768px) {
+  #homepage {
+    grid-template-areas:
+      ". ."
+      "welcome-header welcome-header"
+      "img img";
+    grid-template-rows: 25% min-content min-content;
+    grid-template-columns: 1fr 1fr;
+  }
+  #homepage header {
+    padding-left: 40px;
+  }
+  #homepage header h1 {
+    font-size: 50pt;
+    line-height: 60px;
+  }
+  #homepage header p {
+    margin: 15px 40px 15px 0;
+    font-size: 16pt;
+  }
+  #homepage #portrait img {
+    width: 240px;
+    margin: 50px 40px 50px auto;
+  }
 }
-@media(max-width: 425px) {
-    #homepage {
-        grid-template-areas: 
-        ". ."
-        "welcome-header welcome-header"
-        "img img"
-        ". .";
-        grid-template-rows: 15% min-content 130px 1fr;
-    }
-    #homepage header {
-        padding-left: 30px;
-    }
-    #homepage header h1 {
-        font-size: 30pt;
-        line-height: 30px;
-    }
-    #homepage #portrait {
-        place-items: initial;
-    }
-    #homepage #portrait img {
-        height: 100%;
-        width: initial;
-        margin: 0 0 0 30px;
-    }
+@media (max-width: 425px) {
+  #homepage {
+    grid-template-areas:
+      ". ."
+      "welcome-header welcome-header"
+      "img img"
+      ". .";
+    grid-template-rows: 15% min-content 130px 1fr;
+  }
+  #homepage header {
+    padding-left: 30px;
+  }
+  #homepage header h1 {
+    font-size: 30pt;
+    line-height: 30px;
+  }
+  #homepage #portrait {
+    place-items: initial;
+  }
+  #homepage #portrait img {
+    height: 100%;
+    width: initial;
+    margin: 0 0 0 30px;
+  }
 }
