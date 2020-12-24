@@ -33,9 +33,9 @@ export default class About extends Component {
     this.state = {
       title: "Om meg",
       p1:
-        "Nyutdannet programutvikler med fokusområde på frontend webutvikling. God kompetanse innen språk som Java, JavaScript, HTML, CSS, PHP, SQL, React og Node. Har erfaring med prosjektarbeid utført i agile rammeverk.",
+        "Nyutdannet programutvikler med fokusområde på frontend webutvikling. God kompetanse innen språk som Java, JavaScript, HTML, CSS, PHP, SQL, React, Angular og Node. Har erfaring med prosjektarbeid utført i agile rammeverk.",
       p2:
-        "Lærer nye ting raskt og er sterkt motivert for å utvide min erfaring og kompetanse innen nye teknologier og utviklingsmetoder. Tar stolthet i arbeidet mitt og streber alltid etter et sluttprodukt av høy kvalitet. Ønsker å ta del i en arbeidsplass der nye ideer blir verdsatt og tatt i betraktning.",
+        "Lærer nye ting raskt og er sterkt motivert for å utvide min erfaring og kompetanse innen nye teknologier og utviklingsmetoder. Tar stolthet i arbeidet mitt og streber alltid etter et sluttprodukt av høy kvalitet.",
       transition: true,
     };
   }

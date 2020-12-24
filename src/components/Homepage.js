@@ -44,7 +44,7 @@ export default class Homepage extends Component {
             <h1>Sindre Haavaldsen</h1>
           </SlideIn>
           <SlideIn in={this.state.transition} delay={200}>
-            <p>Program- og webutvikler / Frontend</p>
+            <p>Program- og webutvikler / Fullstack</p>
           </SlideIn>
         </header>
         <FadeIn in={this.state.transition} delay={850}>

@@ -14,6 +14,7 @@ import {
   faCss3Alt,
   faNodeJs,
   faJsSquare,
+  faAngular,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
@@ -26,6 +27,7 @@ import {
   Mattilsynet,
   Tegneprogram,
   QuizApp,
+  Kobo,
 } from "../../resources";
 
 const FadeIn = ({ in: inProp, children, delay }) => (
@@ -90,6 +92,42 @@ export default class Portfolio extends Component {
             {
               icon: faAws,
               color: "#ff9900",
+            },
+          ],
+        },
+        {
+          title: "Husbanken",
+          image: Kobo,
+          description: "Angular / Spring / Cypress / TS",
+          themeColor: "#ab3b0f",
+          link: [
+            {
+              url:
+                "https://www.husbanken.no/om-husbanken/fagomrader/kobo-kommunale-boliger/",
+              icon: faEye,
+              title: "Nettside",
+            },
+          ],
+          stack: [
+            {
+              icon: faAngular,
+              color: "#dd1b16",
+            },
+            {
+              icon: faJsSquare,
+              color: "#f5bb2b",
+            },
+            {
+              icon: faCss3Alt,
+              color: "#0068bb",
+            },
+            {
+              icon: faJava,
+              color: "#f89820",
+            },
+            {
+              icon: faDatabase,
+              color: "#055b83",
             },
           ],
         },
