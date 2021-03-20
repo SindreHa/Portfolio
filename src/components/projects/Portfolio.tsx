@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Project from "./Project";
 import "../../css/projects.css";
 
@@ -30,7 +30,7 @@ import {
   Kobo,
 } from "../../resources";
 
-const FadeIn = ({ in: inProp, children, delay }) => (
+const FadeIn = ({ in: inProp, children, delay }: any) => (
   <CSSTransition
     unmountOnExit
     in={inProp}
@@ -42,7 +42,7 @@ const FadeIn = ({ in: inProp, children, delay }) => (
   </CSSTransition>
 );
 
-const SlideIn = ({ in: inProp, children, delay }) => (
+const SlideIn = ({ in: inProp, children, delay }: any) => (
   <CSSTransition
     unmountOnExit
     in={inProp}
@@ -54,9 +54,34 @@ const SlideIn = ({ in: inProp, children, delay }) => (
   </CSSTransition>
 );
 
-export default class Portfolio extends Component {
-  constructor() {
-    super();
+interface Link {
+  url: string,
+  icon: any,
+  title: string,
+}
+
+interface Stack {
+  icon: any,
+  color: string,
+}
+
+interface Projects {
+    title: string,
+    image: any,
+    description: string,
+    themeColor: string,
+    link: Link[],
+    stack: Stack[],
+}
+
+interface AppState {
+  projects: Projects[],
+  transition: boolean
+}
+
+export default class Portfolio extends React.Component<{}, AppState> {
+  constructor(props: any) {
+    super(props);
     this.state = {
       projects: [
         {
@@ -301,22 +326,23 @@ export default class Portfolio extends Component {
 
   componentDidMount() {}
 
-  scrollContainer = () => {
+  /* scrollContainer = () => {
     const container = document.querySelector("#projects");
     console.log("klikk");
 
-    container.scrollBy({
-      left: 100, // could be negative value
-      behavior: "smooth",
-    });
-  };
+    container ? container.scrollBy({
+          left: 100, // could be negative value
+          behavior: "smooth",
+        }) 
+      : undefined;
+  }; */
 
   render() {
     let delay = 350;
     return (
       <div id="projects-wrapper">
         <SlideIn in={this.state.transition} delay={0}>
-          <h1 onClick={() => this.scrollContainer()} id="projects-title">
+          <h1 id="projects-title">
             Portefølje
           </h1>
         </SlideIn>
@@ -325,7 +351,7 @@ export default class Portfolio extends Component {
             delay += 250;
             return (
               <FadeIn in={this.state.transition} delay={delay} key={i}>
-                <Project project={project} i={i} />
+                <Project project={project}/>
               </FadeIn>
             );
           })}
