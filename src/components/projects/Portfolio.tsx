@@ -44,6 +44,7 @@ interface Stack {
 
 interface Projects {
     title: string,
+    order: number,
     image: any,
     description: string,
     themeColor: string,
@@ -56,6 +57,7 @@ interface AppState {
   transition: boolean
 }
 
+
 export default class Portfolio extends React.Component<{}, AppState> {
   constructor(props: any) {
     super(props);
@@ -63,6 +65,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
       projects: [
         {
           title: "Buzzdgame",
+          order: 3,
           image: Buzzdgame,
           description: "Webapp / React / AWS",
           themeColor: "#0097a7",
@@ -99,13 +102,14 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Husbanken",
+          order: 2,
           image: Kobo,
           description: "Angular / Spring / Cypress / TS",
           themeColor: "#ab3b0f",
           link: [
             {
               url:
-                "https://www.husbanken.no/om-husbanken/fagomrader/kobo-kommunale-boliger/",
+                "https://www.husbanken.no/kobo/",
               icon: faEye,
               title: "Nettside",
             },
@@ -135,6 +139,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Statnett",
+          order: 1,
           image: Statnett,
           description: "Angular / Spring / Cypress / TS",
           themeColor: "#0fab36",
@@ -171,6 +176,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "SHBilpleie",
+          order: 8,
           image: ShBilpleie,
           description: "Webapp / React",
           themeColor: "#ab3b0f",
@@ -203,6 +209,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Social Campus",
+          order: 6,
           image: SocialCampus,
           description: "Webapp / JS / PHP / MySQL",
           themeColor: "#049ee5",
@@ -234,6 +241,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Social Campus",
+          order: 9,
           image: SocialCampusApp,
           description: "Android App / Java / MySQL",
           themeColor: "#049ee5",
@@ -261,6 +269,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Mattilsynet",
+          order: 4,
           image: Mattilsynet,
           description: "Android App / Java",
           themeColor: "#d32e2d",
@@ -284,6 +293,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Quiz App",
+          order: 5,
           image: QuizApp,
           description: "Java / Spring Boot / React",
           themeColor: "#296177",
@@ -315,6 +325,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
         },
         {
           title: "Paint Applikasjon",
+          order: 7,
           image: Tegneprogram,
           description: "Java program / JavaFX",
           themeColor: "#ececec",
@@ -332,7 +343,7 @@ export default class Portfolio extends React.Component<{}, AppState> {
             },
           ],
         },
-      ],
+      ].sort((a, b) => a.order - b.order),
       transition: true,
     };
   }
