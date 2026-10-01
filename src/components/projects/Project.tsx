@@ -1,10 +1,15 @@
+import type { Ref } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { ProjectData } from "./data";
 
-function Project(props: any) {
-  const project = props.project;
+interface ProjectProps {
+  project: ProjectData;
+  ref?: Ref<HTMLDivElement>;
+}
 
+function Project({ project, ref }: ProjectProps) {
   return (
-    <div className="project-container" ref={props.ref}>
+    <div className="project-container" ref={ref}>
       <div className="image-container">
         <img src={project.image} alt="prosjektbilde" />
       </div>
@@ -14,17 +19,22 @@ function Project(props: any) {
         className="project-stack"
         style={{ borderColor: project.themeColor }}
       >
-        {project.stack.map((icon: any, i: number) => (
-          <FontAwesomeIcon key={i} color={icon.color} icon={icon.icon} />
+        {project.stack.map((tech) => (
+          <FontAwesomeIcon
+            key={tech.icon.iconName}
+            color={tech.color}
+            icon={tech.icon}
+          />
         ))}
       </div>
       <div className="button-container">
-        {project.link.map((link: any, i: number) => (
+        {project.links.map((link) => (
           <a
             className="btn"
             href={link.url}
-            target="blank"
-            key={i}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={link.url}
             style={{ borderColor: project.themeColor }}
           >
             {link.title}
