@@ -6,3 +6,4 @@ export { default as Tegneprogram } from "./tegneprogram.jpg";
 export { default as SocialCampusApp } from "./socialcampus-app.jpg";
 export { default as QuizApp } from "./quizapp.jpg";
 export { default as Kobo } from "./kobo.jpg";
+export { default as Statnett } from "./statnett.png";

@@ -28,6 +28,7 @@ import {
   Tegneprogram,
   QuizApp,
   Kobo,
+  Statnett,
 } from "../../resources";
 
 interface Link {
@@ -105,6 +106,42 @@ export default class Portfolio extends React.Component<{}, AppState> {
             {
               url:
                 "https://www.husbanken.no/om-husbanken/fagomrader/kobo-kommunale-boliger/",
+              icon: faEye,
+              title: "Nettside",
+            },
+          ],
+          stack: [
+            {
+              icon: faAngular,
+              color: "#dd1b16",
+            },
+            {
+              icon: faJsSquare,
+              color: "#f5bb2b",
+            },
+            {
+              icon: faCss3Alt,
+              color: "#0068bb",
+            },
+            {
+              icon: faJava,
+              color: "#f89820",
+            },
+            {
+              icon: faDatabase,
+              color: "#055b83",
+            },
+          ],
+        },
+        {
+          title: "Statnett",
+          image: Statnett,
+          description: "Angular / Spring / Cypress / TS",
+          themeColor: "#0fab36",
+          link: [
+            {
+              url:
+                "https://www.statnett.no/",
               icon: faEye,
               title: "Nettside",
             },
