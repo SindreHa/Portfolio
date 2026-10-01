@@ -1,32 +1,8 @@
 import React from "react";
 import "../css/homepage.css";
-import { CSSTransition } from "react-transition-group";
+import { SlideIn, FadeIn } from "./Transitions";
 
 import portrait from "../resources/portrait.jpg";
-
-const SlideIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="slideIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
-
-const FadeIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="fadeIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
 
 interface AppState {
   transition: boolean

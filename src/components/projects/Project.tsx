@@ -1,6 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Project(props: any) {
@@ -37,9 +34,5 @@ function Project(props: any) {
     </div>
   );
 }
-
-Project.propTypes = {
-  project: PropTypes.object.isRequired,
-};
 
 export default Project;

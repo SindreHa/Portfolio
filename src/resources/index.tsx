@@ -1,8 +1,8 @@
-export const Buzzdgame = require("./buzzdgame.jpg");
-export const ShBilpleie = require("./shbilpleie.jpg");
-export const SocialCampus = require("./socialcampus.jpg");
-export const Mattilsynet = require("./mattilsynet.jpg");
-export const Tegneprogram = require("./tegneprogram.jpg");
-export const SocialCampusApp = require("./socialcampus-app.jpg");
-export const QuizApp = require("./quizapp.jpg");
-export const Kobo = require("./kobo.jpg");
+export { default as Buzzdgame } from "./buzzdgame.jpg";
+export { default as ShBilpleie } from "./shbilpleie.jpg";
+export { default as SocialCampus } from "./socialcampus.jpg";
+export { default as Mattilsynet } from "./mattilsynet.jpg";
+export { default as Tegneprogram } from "./tegneprogram.jpg";
+export { default as SocialCampusApp } from "./socialcampus-app.jpg";
+export { default as QuizApp } from "./quizapp.jpg";
+export { default as Kobo } from "./kobo.jpg";

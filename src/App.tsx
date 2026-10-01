@@ -1,15 +1,12 @@
-import React from "react";
 import "./App.css";
-import { createBrowserHistory } from 'history';
 
 import Homepage from "./components/Homepage";
 import Nav from "./components/navbar/Nav";
 import About from "./components/About";
 import Portfolio from "./components/projects/Portfolio";
-import { Route, Router } from "react-router-dom";
-const history = createBrowserHistory();
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App(): JSX.Element {
+function App() {
   /**
    * Metode som henter høyde av viewport minus nettleser sin toolbar
    */
@@ -21,18 +18,14 @@ function App(): JSX.Element {
   getViewHeight();
 
   return (
-    <Router history={history}>
+    <BrowserRouter>
       <Nav />
-      <Route exact path="/">
-        <Homepage  />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/projects">
-        <Portfolio />
-      </Route>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about/*" element={<About />} />
+        <Route path="/projects/*" element={<Portfolio />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

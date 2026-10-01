@@ -1,30 +1,7 @@
 import React from "react";
 import "../css/about.css";
 
-import { CSSTransition } from "react-transition-group";
-const SlideIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="slideIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
-
-const FadeIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="fadeIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
+import { SlideIn, FadeIn } from "./Transitions";
 
 interface AppState {
   title: string,

@@ -2,7 +2,7 @@ import React from "react";
 import Project from "./Project";
 import "../../css/projects.css";
 
-import { CSSTransition } from "react-transition-group";
+import { SlideIn, FadeIn } from "../Transitions";
 import {
   faReact,
   faAws,
@@ -29,30 +29,6 @@ import {
   QuizApp,
   Kobo,
 } from "../../resources";
-
-const FadeIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="fadeIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
-
-const SlideIn = ({ in: inProp, children, delay }: any) => (
-  <CSSTransition
-    unmountOnExit
-    in={inProp}
-    timeout={delay}
-    classNames="slideIn"
-    appear
-  >
-    {children}
-  </CSSTransition>
-);
 
 interface Link {
   url: string,

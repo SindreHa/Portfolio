@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "target": "es5",
+    "jsx": "react-jsx",
+    "target": "es2020",
     "module": "esnext",
     "strict": true,
     "esModuleInterop": true,
@@ -14,7 +14,7 @@
     ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true

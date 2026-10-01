@@ -1,11 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withRouter, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Links(props: any) {
-  const currentLocation = props.location.pathname;
+  const currentLocation = useLocation().pathname;
   const links = props.links;
 
   switch (props.type) {
@@ -48,10 +46,4 @@ function Links(props: any) {
   }
 }
 
-Links.propTypes = {
-  links: PropTypes.array.isRequired,
-  class: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-};
-
-export default withRouter(Links);
+export default Links;
