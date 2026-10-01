@@ -4,7 +4,7 @@ function Project(props: any) {
   const project = props.project;
 
   return (
-    <div className="project-container">
+    <div className="project-container" ref={props.ref}>
       <div className="image-container">
         <img src={project.image} alt="prosjektbilde" />
       </div>
